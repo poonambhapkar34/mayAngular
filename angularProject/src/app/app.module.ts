@@ -10,6 +10,8 @@ import { PopupComponent } from './popup/popup/popup.component';
 import { Popup2Component } from './popup/popup2/popup2.component';
 import { UserModule } from './user/user.module';
 import { FormsModule } from '@angular/forms';
+import { CustomDirective } from './directive/custom.directive';
+import { HighLight} from "../app/directive/hightLight";
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { FormsModule } from '@angular/forms';
     LoginComponent,
     LogoutComponent,
     PopupComponent,
-    Popup2Component
+    Popup2Component,
+    CustomDirective,
+    HighLight
   ],
   imports: [
     BrowserModule,

@@ -26,7 +26,13 @@ export class LogoutComponent implements OnInit {
      }
   }
    car:any = 'i10';
-   colorOf = 'yellow'
+   colorOf = 'yellow';
+   item = [
+    {name:'santosh',age:'23',gmail:'santoshmulak98@gmail.com'},
+    {name:'shivaji',age:'224',gmail:'shivaji98@gmail.com'},
+    {name:'sachin',age:'20',gmail:'sachinmulak98@gmail.com'},
+  ]
+  styleProp = 'main';
 
 
   constructor(private serviceStorage:StorageService) { }
@@ -45,6 +51,9 @@ export class LogoutComponent implements OnInit {
    let value = this.serviceStorage.getdata();
     console.log('value', value);
     
+  }
+  styleProperty(){
+    return 'main1';
   }
 
 }

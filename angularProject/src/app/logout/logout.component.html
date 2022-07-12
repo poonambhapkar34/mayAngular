@@ -47,10 +47,41 @@ switch(){
     <p *ngSwitchDefault>I dont have car</p>
 </div><br>
 
-<h1 style="background-color: pink;">Inline Style</h1>
-<h2 [ngStyle]="{'background-color':'red'}">ngStyle</h2>
+<h1 style="background-color: PINK;">Inline Style</h1>
+<h2 [ngStyle]="{'background-color':'RED'}">ngStyle</h2>
 <h2 [ngStyle]="{'background-color':colorOf}">dyanamic color binding</h2>
 <div [ngStyle]="{'color' : colorOf === 'yellow' ? 'yellow' : 'green'}">
 This is conditional style binding
 </div>
- 
+<div *ngFor="let items of item; let i = 'index + 1'" >
+ {{i}}   {{items.name}}, {{items.age}}
+</div>
+<!--ngClass-->
+
+<div class="main main1">
+<p>we are learning ngClass</p>
+<p >yellowwwww</p>
+</div>
+
+<div [ngClass]="'main main1'">
+    <p>we are learning ngClass</p>
+    <p >yellowwwww</p>
+    </div>
+
+    <div [ngClass]="styleProp">
+        <p>we are learning ngClass on property</p>
+        <p >yellowwwww</p>
+    </div>
+    
+    <div [ngClass]="styleProperty()">
+        <p>we are learning ngClass on function</p>
+        <p >yellowwwww</p>
+    </div>
+        
+    <div [ngClass]="styleProp == 'main'? 'main' : 'main1'">
+        <p>we are learning ngClass by using ternory operator</p>
+        <p >yellowwwww</p>
+    </div>
+<!--Custom Directive-->
+ <h3 appCustom >we learning custom directive</h3>
+ <p appCustom>llllllllllllllllllll</p>
