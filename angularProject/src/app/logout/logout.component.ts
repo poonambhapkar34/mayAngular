@@ -34,6 +34,8 @@ export class LogoutComponent implements OnInit {
   ]
   styleProp = 'main';
 
+  directiveColor= 'violet';
+
 
   constructor(private serviceStorage:StorageService) { }
 

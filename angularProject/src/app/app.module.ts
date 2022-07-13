@@ -11,7 +11,7 @@ import { Popup2Component } from './popup/popup2/popup2.component';
 import { UserModule } from './user/user.module';
 import { FormsModule } from '@angular/forms';
 import { CustomDirective } from './directive/custom.directive';
-import { HighLight} from "../app/directive/hightLight";
+import { LightDirective } from './directive/light.directive';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,7 @@ import { HighLight} from "../app/directive/hightLight";
     PopupComponent,
     Popup2Component,
     CustomDirective,
-    HighLight
+    LightDirective
   ],
   imports: [
     BrowserModule,

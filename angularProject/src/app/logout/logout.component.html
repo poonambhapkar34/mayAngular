@@ -85,3 +85,12 @@ This is conditional style binding
 <!--Custom Directive-->
  <h3 appCustom >we learning custom directive</h3>
  <p appCustom>llllllllllllllllllll</p>
+ <!--Handling user events-->
+
+ <p appHighlight2 >Handling user events</p>
+ <h1 appLight>lightTag directive </h1>
+ <div>
+<input type="radio" name="directiveColor1" (click)="directiveColor='blue'"> blue
+<input type="radio" name="directiveColor1" (click)="directiveColor='red'"> red
+ </div>
+ <p [appLight]="directiveColor">passing values</p>
