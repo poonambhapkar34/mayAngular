@@ -12,7 +12,7 @@ export class LogoutComponent implements OnInit {
      hide =false;
      colors= ['red','orange','green','yellow','aqua','blue'];
      info = {
-       myInfo: {
+      myInfo: {
       name: 'poonam',
       age: 30,
       city: 'mumbai',
@@ -35,6 +35,9 @@ export class LogoutComponent implements OnInit {
   styleProp = 'main';
 
   directiveColor= 'violet';
+  name = 'Jay Patil'
+  date = Date.now();
+  amt:number=2000;
 
 
   constructor(private serviceStorage:StorageService) { }

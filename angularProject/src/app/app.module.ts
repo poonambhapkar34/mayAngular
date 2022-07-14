@@ -12,6 +12,8 @@ import { UserModule } from './user/user.module';
 import { FormsModule } from '@angular/forms';
 import { CustomDirective } from './directive/custom.directive';
 import { LightDirective } from './directive/light.directive';
+import { ChractersOnlyDirective } from './directive/chracters-only.directive';
+import { CurrencyPipe } from './pipe/currency.pipe';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { LightDirective } from './directive/light.directive';
     PopupComponent,
     Popup2Component,
     CustomDirective,
-    LightDirective
+    LightDirective,
+    ChractersOnlyDirective,
+    CurrencyPipe
   ],
   imports: [
     BrowserModule,

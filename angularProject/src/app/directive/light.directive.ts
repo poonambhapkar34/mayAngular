@@ -16,7 +16,7 @@ export class LightDirective {
   @HostListener('mouseleave') onMouseLeave() {
     this.highlight('');
   }
-  private highlight(color: string) {
+   highlight(color: string) {
     this.el.nativeElement.style.backgroundColor = color;
   }
 }

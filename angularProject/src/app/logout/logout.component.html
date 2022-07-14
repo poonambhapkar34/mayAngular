@@ -94,3 +94,14 @@ This is conditional style binding
 <input type="radio" name="directiveColor1" (click)="directiveColor='red'"> red
  </div>
  <p [appLight]="directiveColor">passing values</p>
+ <!--character only dir-->
+ <input appChractersOnly type="text" >Enter Full name
+  <!-- | - pipe symbol--> 
+<h2>{{name | uppercase}}</h2>
+<h2>{{name | lowercase}}</h2>
+<h2>{{name | titlecase}}</h2>
+<h3>{{date | date : 'MM-dd-YYYY'}}</h3>
+<!--Custom Pipe-->
+<h2>{{10 | currency}}</h2>
+<!-- <input type="text" value="amt|currency:false">amount
+<h1>{{amt|currency:true}}</h1> -->
