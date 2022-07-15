@@ -14,6 +14,8 @@ import { CustomDirective } from './directive/custom.directive';
 import { LightDirective } from './directive/light.directive';
 import { ChractersOnlyDirective } from './directive/chracters-only.directive';
 import { CurrencyPipe } from './pipe/currency.pipe';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { AdminModule } from './admin/admin.module';
 
 @NgModule({
   declarations: [
@@ -26,13 +28,15 @@ import { CurrencyPipe } from './pipe/currency.pipe';
     CustomDirective,
     LightDirective,
     ChractersOnlyDirective,
-    CurrencyPipe
+    CurrencyPipe,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     UserModule,
-    FormsModule
+    FormsModule,
+    AdminModule
   ],
   providers: [],
   bootstrap: [AppComponent]
