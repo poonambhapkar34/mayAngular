@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../data.service';
-import { PopupdataService } from '../popup/popupdata.service';
-import { StorageService } from '../storage.service';
+import { DataService } from './../../data.service';
+import { PopupdataService } from '../../popup/popupdata.service';
+import { StorageService } from './../../storage.service';
 
 @Component({
   selector: 'app-login',
