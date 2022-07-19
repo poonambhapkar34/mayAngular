@@ -4,12 +4,15 @@ import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { AdminlogoutComponent } from './adminlogout/adminlogout.component';
 
 const routes: Routes = [
-  {
-    path: 'admin', children: [
-      { path: 'adminLogin', component: AdminloginComponent },
-      { path: 'adminLogout', component: AdminlogoutComponent }
-    ]
-  }]
+  // {
+  //   path: 'admin', children: [
+  //     { path: 'adminLogin', component: AdminloginComponent },
+  //     { path: 'adminLogout', component: AdminlogoutComponent }
+  //   ]
+  // }
+         { path: 'adminLogin', component: AdminloginComponent },
+          { path: 'adminLogout', component: AdminlogoutComponent }
+        ]
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

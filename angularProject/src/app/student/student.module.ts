@@ -5,6 +5,7 @@ import { StudentRoutingModule } from './student-routing.module';
 import { StudentloginComponent } from './studentlogin/studentlogin.component';
 import { StudentlogoutComponent } from './studentlogout/studentlogout.component';
 
+console.log('studentComponent');
 
 @NgModule({
   declarations: [
