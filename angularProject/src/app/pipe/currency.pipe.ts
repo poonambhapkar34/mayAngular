@@ -1,4 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
+console.log('pipe');
 
 @Pipe({
   name: 'currency'

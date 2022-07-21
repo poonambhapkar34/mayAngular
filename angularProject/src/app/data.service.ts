@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+console.log('global Data service')
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,6 @@ export class DataService {
    // storageData = 'I live in Mumbai';
    cars:any;
    fruit: any;
-
   constructor() { }
 
   dataServiceFunction(){

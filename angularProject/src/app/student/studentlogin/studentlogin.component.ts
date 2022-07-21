@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+console.log('studentModule');
 
 @Component({
   selector: 'app-studentlogin',
@@ -10,6 +11,7 @@ export class StudentloginComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }

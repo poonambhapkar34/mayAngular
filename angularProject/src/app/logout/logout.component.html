@@ -1,0 +1,108 @@
+<p>logout works!</p>
+<p>logout works!</p>
+<button (click)="getData()">getDataLogOut</button>
+<!--@directive
+1)component directive eg. @Component
+2)structural : * , eg *ngIf, *ngFor, *ngSwitch
+if(true){
+    code block
+}
+for(let i=0 ; i<array.lenght, i++){
+    CB
+}
+for(let items of item){
+
+}
+switch(){
+    case 1 : ;
+    default: ;
+}
+3)Attribute : ngClass, ngStyle.
+4)custom : ng g directive Directive_Name
+-->
+
+<h1>We are learning Directives</h1>
+<div *ngIf="hide">
+    <h2 >if block</h2>
+    <p>inside dive if condition satishfied</p>
+</div>
+<h2 *ngIf="!hide">else block</h2>
+<h3>We are learning *ngFor</h3>
+<div>
+{{colors[0]}}<br>
+</div><br>
+
+<li *ngFor="let colorsItem of colors">
+    {{colorsItem}}
+</li><br>
+ <p>{{info.myInfo.age}}</p>
+ <br>
+
+<h1>ngSwitch</h1>
+<div [ngSwitch]="car">
+    <p *ngSwitchCase="'swift'"> i have Swift Car</p>
+    <p *ngSwitchCase="'SwiftDesire'"> i have Swift Desire Car</p>
+    <p *ngSwitchCase="'Marcedeez'"> i have Marcedeez</p>
+    <p *ngSwitchCase="'mini cup'"> i havemini cup Car</p>
+    <p *ngSwitchCase="'i20'"> i have i20 Car</p>
+    <p *ngSwitchDefault>I dont have car</p>
+</div><br>
+
+<h1 style="background-color: PINK;">Inline Style</h1>
+<h2 [ngStyle]="{'background-color':'RED'}">ngStyle</h2>
+<h2 [ngStyle]="{'background-color':colorOf}">dyanamic color binding</h2>
+<div [ngStyle]="{'color' : colorOf === 'yellow' ? 'yellow' : 'green'}">
+This is conditional style binding
+</div>
+<div *ngFor="let items of item; let i = 'index + 1'" >
+ {{i}}   {{items.name}}, {{items.age}}
+</div>
+<!--ngClass-->
+
+<div class="main main1">
+<p>we are learning ngClass</p>
+<p >yellowwwww</p>
+</div>
+
+<div [ngClass]="'main main1'">
+    <p>we are learning ngClass</p>
+    <p >yellowwwww</p>
+    </div>
+
+    <div [ngClass]="styleProp">
+        <p>we are learning ngClass on property</p>
+        <p >yellowwwww</p>
+    </div>
+    
+    <div [ngClass]="styleProperty()">
+        <p>we are learning ngClass on function</p>
+        <p >yellowwwww</p>
+    </div>
+        
+    <div [ngClass]="styleProp == 'main'? 'main' : 'main1'">
+        <p>we are learning ngClass by using ternory operator</p>
+        <p >yellowwwww</p>
+    </div>
+<!--Custom Directive-->
+ <h3 appCustom >we learning custom directive</h3>
+ <p appCustom>llllllllllllllllllll</p>
+ <!--Handling user events-->
+
+ <p appHighlight2 >Handling user events</p>
+ <h1 appLight>lightTag directive </h1>
+ <div>
+<input type="radio" name="directiveColor1" (click)="directiveColor='blue'"> blue
+<input type="radio" name="directiveColor1" (click)="directiveColor='red'"> red
+ </div>
+ <p [appLight]="directiveColor">passing values</p>
+ <!--character only dir-->
+ <input appChractersOnly type="text" >Enter Full name
+  <!-- | - pipe symbol--> 
+<h2>{{name | uppercase}}</h2>
+<h2>{{name | lowercase}}</h2>
+<h2>{{name | titlecase}}</h2>
+<h3>{{date | date : 'MM-dd-YYYY'}}</h3>
+<!--Custom Pipe-->
+<h2>{{10 | currency}}</h2>
+<!-- <input type="text" value="amt|currency:false">amount
+<h1>{{amt|currency:true}}</h1> -->
