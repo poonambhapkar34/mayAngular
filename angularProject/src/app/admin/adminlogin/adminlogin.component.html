@@ -1,1 +1,24 @@
+<div class="main">
 <p>adminlogin works!</p>
+<div>
+<h1>Admin Form</h1>
+<form #adminForm="ngForm" (ngSubmit)="adminFormData(adminForm.value)" autocomplete="off" >
+
+<input type="text" name="adminName" placeholder="Enter your name" ngModel >Name
+<br><br>
+<input type="tel" name="adminMobile" placeholder="Enter Mobile number" ngModel> Mobile number
+<br><br>
+<button >submit</button>
+
+</form>
+
+
+
+</div>
+</div>
+
+
+
+
+
+

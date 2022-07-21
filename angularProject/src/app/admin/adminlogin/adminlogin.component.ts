@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { FormGroup, NgForm } from '@angular/forms';
 @Component({
   selector: 'app-adminlogin',
   templateUrl: './adminlogin.component.html',
@@ -8,8 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class AdminloginComponent implements OnInit {
 
   constructor() { }
-
+ 
   ngOnInit(): void {
+  }
+  adminFormData(adminFormData:NgForm){
+    console.log(adminFormData);
+    
+
+
   }
 
 }
