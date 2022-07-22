@@ -8,13 +8,9 @@ import { FormGroup,FormBuilder, } from '@angular/forms';
 })
 
 export class AppComponent {
-  studentDataForm : any;
-  constructor(private fb: FormBuilder ) { }
+  
 
   ngOnInit(): void {
-this.studentDataForm = this.fb.group({
-  adminName:['poo']
-})
 
   }
 }

@@ -1,14 +1,16 @@
 <p>studentlogin works!</p>
 <div>
-<form [formGroup] = "studentDataForm!">
-   
+      <form [formGroup]="studentForm!">
+        <input type="text" formControlName="studentName">Student Name
+        <br>  <br>
+        <input type="text" formControlName="studentMob">Student Mobile No
+        <br>  <br>
+        <input type="text" formControlName="studentEmail">Student Email
+        <br>  <br>
+        <button (click)="studentData()">submit</button>
 
-        <input type="text" formControlName="adminName" placeholder="Enter your name"  >Name
-        <br><br>
-        <input type="tel" fomControlName= "adminMobile" placeholder="Enter Mobile number" > Mobile number
-        <br><br>
-        <button >submit</button>
 
-</form>
+      </form>  
+
 
 </div>
