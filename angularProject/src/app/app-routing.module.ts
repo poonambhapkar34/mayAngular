@@ -12,7 +12,7 @@ const routes: Routes = [
   {path:'logout', component: LogoutComponent},
 
   // {path:'**', component:PagenotfoundComponent}
-  {path:'', redirectTo:'/home' , pathMatch:'full'},
+//  {path:'', redirectTo:'/home' , pathMatch:'full'},
   {path: 'home' , component: HomeComponent},
   // {path:'**', component:PagenotfoundComponent}
   {path: 'student', loadChildren:()=>import('./student/student.module').then(modu=>modu.StudentModule)},

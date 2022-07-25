@@ -29,7 +29,7 @@ import { MatSliderModule } from '@angular/material/slider';
     LightDirective,
     CurrencyPipe,
     PopupComponent,
-    ChractersOnlyDirective,
+   
     Popup2Component,
     PagenotfoundComponent,
     LoginComponent,
@@ -47,6 +47,7 @@ import { MatSliderModule } from '@angular/material/slider';
     ReactiveFormsModule
     // AdminModule
   ],
+
 
   providers: [],
   bootstrap: [AppComponent]

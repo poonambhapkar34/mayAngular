@@ -17,8 +17,10 @@ export class AdminloginComponent implements OnInit {
 
 
   }
-  adminFormData(adminFormData:NgForm){
+  adminFormData(adminFormData:NgForm , xyx?:any){
     console.log(adminFormData);
+    console.log(xyx);
+    
     
   }
 
