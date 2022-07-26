@@ -10,6 +10,10 @@ export class DataService {
    // storageData = 'I live in Mumbai';
    cars:any;
    fruit: any;
+   carsDetail= {
+    carName:'mincuper',
+    carPrice:'2500000'
+   }
   constructor() { }
 
   dataServiceFunction(){

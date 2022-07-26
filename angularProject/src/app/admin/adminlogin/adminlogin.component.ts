@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, NgForm } from '@angular/forms';
+import { DataService } from ".././../data.service";
+
 @Component({
   selector: 'app-adminlogin',
   templateUrl: './adminlogin.component.html',
@@ -10,10 +12,11 @@ export class AdminloginComponent implements OnInit {
       name:'Jay',
       mobileNo:'9896666666'
   }
-  constructor() { }
+  carData:any;
+  constructor(private dataService: DataService ) { }
  
   ngOnInit(): void {
-   
+    this.carData = this.dataService.carsDetail
 
 
   }

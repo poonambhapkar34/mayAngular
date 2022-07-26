@@ -1,16 +1,29 @@
 <p>studentlogin works!</p>
 <div>
-      <form [formGroup]="studentForm!">
-        <input type="text" formControlName="studentName">Student Name
-        <br>  <br>
-        <input type="text" formControlName="studentMob">Student Mobile No
-        <br>  <br>
-        <input type="text" formControlName="studentEmail">Student Email
-        <br>  <br>
-        <button (click)="studentData()">submit</button>
+  <form [formGroup]="studentForm!">
+    <input type="text" formControlName="studentName">Student Name
+    <br>
+    <span class="error" *ngIf="studentForm.get('studentName')?.touched && 
+        !studentForm.get('studentName')?.valid && studentForm.get('studentName')?.hasError?.('required')
+        || studentForm.get('studentName')?.hasError?.('maxlength')" class="error">Enter valid name
+
+    </span>
+    <span *ngIf="!studentForm.get('studentName')?.touched && studentForm.get('studentName')?.hasError?.('required') ">name is required</span>
+    <br>
+    <input type="text" formControlName="studentMob">Student Mobile No
+    <br>
+    <span class="error"
+      *ngIf="studentForm.get('studentMob')?.hasError?.('pattern') && studentForm.get('studentMob')?.hasError?.('maxlength')">Enter
+      Mobile no</span>
+    <br>
+    <!--studentForm.get('studentMob')?.hasError?.('maxlength') *ngIf="studentForm.get('studentMob')?.hasError?.('maxlength')"-->
+    <input type="text" formControlName="studentEmail">Student Email
+    <br>
+    <span class="error" *ngIf="studentForm.get('studentEmail')?.hasError?.('email')">Enter valid Email</span> <br>
+    <button (click)="studentData()">submit</button>
 
 
-      </form>  
+  </form>
 
 
 </div>
