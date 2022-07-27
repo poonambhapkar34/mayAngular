@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup,FormControl,FormBuilder,Validators } from '@angular/forms';
+import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 
 
 console.log('studentModule');
@@ -11,26 +11,35 @@ console.log('studentModule');
 })
 export class StudentloginComponent implements OnInit {
 
-  studentForm!:FormGroup
-  constructor(private fb:FormBuilder) { }
+  studentForm!: FormGroup;
+  studentMatForm!: FormGroup;
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
-    this.StudentFormData()
+    this.StudentFormData();
+    this.studentMatData();
+
 
   }
-//[A-Za-z]{3}[Pp][A-Za-z]{1}[0-9]{4}[A-Za-z]{1} //pan
-    StudentFormData(){
-      this.studentForm = this.fb.group({
-        studentName:['',[Validators.required , Validators.maxLength(20)] ],
-        studentMob:['8898956555',[ Validators.pattern("^[0-9]{10}$"), Validators.maxLength(10)]],
-        studentEmail:['jay@gmail.com',[Validators.email]]
+  //[A-Za-z]{3}[Pp][A-Za-z]{1}[0-9]{4}[A-Za-z]{1} //pan
+  StudentFormData() {
+    this.studentForm = this.fb.group({
+      studentName: ['', [Validators.required, Validators.maxLength(20)]],
+      studentMob: ['8898956555', [Validators.pattern("^[0-9]{10}$"), Validators.maxLength(10)]],
+      studentEmail: ['jay@gmail.com', [Validators.email]]
 
-      })
-    }
+    })
+  }
 
-    studentData(){
+  studentData() {
+    console.log(this.studentForm.value);
+  }
 
-      console.log(this.studentForm.value);
-      
-    }
+
+  studentMatData() {
+    this.studentMatForm = this.fb.group({
+      studentMatName: ['', [Validators.required, Validators.maxLength(10)]],
+
+  })
+}
 }

@@ -27,3 +27,20 @@
 
 
 </div>
+<br>
+<button (click)="studentMatData()">Mat Form</button>
+
+<br>
+<div>
+<form [formGroup]="studentMatForm!">
+<mat-form-field>
+  <mat-label>StudentMatName</mat-label>
+  <input matInput  type="text" formControlName="studentMatName">
+  <mat-hint >Please enter your name as per Adhar card</mat-hint>
+  <mat-error *ngIf="studentMatForm.get('studentMatName')?.hasError?.('maxlength')">Please enter valid name as per Adhar card</mat-error>
+
+</mat-form-field>
+<button mat-raised-button class="btn" color="warn">Matsubmit</button>
+</form>
+
+</div>

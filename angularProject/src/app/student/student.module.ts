@@ -5,6 +5,9 @@ import { StudentRoutingModule } from './student-routing.module';
 import { StudentloginComponent } from './studentlogin/studentlogin.component';
 import { StudentlogoutComponent } from './studentlogout/studentlogout.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {  MatButtonModule, } from "@angular/material/button";
 
 
 console.log('studentComponent');
@@ -18,7 +21,12 @@ console.log('studentComponent');
     CommonModule,
     StudentRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+
+
   
   ]
 })
