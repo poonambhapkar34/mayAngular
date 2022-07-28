@@ -8,9 +8,18 @@ import { FormGroup,FormBuilder, } from '@angular/forms';
 })
 
 export class AppComponent {
+  myName = 'Jay Patil';
   
+  // ngOnchanges(){
+  //   console.log('ngOnchange calling');
+  // }
 
+  
   ngOnInit(): void {
+
+  }
+  dataFromParToChild(data:any){
+    this.myName = data
 
   }
 }

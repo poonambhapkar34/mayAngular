@@ -21,6 +21,7 @@ import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {  MatButtonModule, } from "@angular/material/button";
 import { MatSliderModule } from '@angular/material/slider';
+import { ChildComponent } from './child/child.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +35,8 @@ import { MatSliderModule } from '@angular/material/slider';
     PagenotfoundComponent,
     LoginComponent,
     LogoutComponent,
-    HomeComponent
+    HomeComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,

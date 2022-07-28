@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
+import { DataService } from 'src/app/data.service';
 
 
 console.log('studentModule');
@@ -13,11 +14,13 @@ export class StudentloginComponent implements OnInit {
 
   studentForm!: FormGroup;
   studentMatForm!: FormGroup;
-  constructor(private fb: FormBuilder) { }
+  matForm: boolean = false;
+
+  constructor(private fb: FormBuilder, private dataService:DataService) { }
 
   ngOnInit(): void {
     this.StudentFormData();
-    this.studentMatData();
+    //this.studentMatData();
 
 
   }
@@ -37,9 +40,16 @@ export class StudentloginComponent implements OnInit {
 
 
   studentMatData() {
+    this.matForm = true;
     this.studentMatForm = this.fb.group({
       studentMatName: ['', [Validators.required, Validators.maxLength(10)]],
 
-  })
-}
+    })
+  }
+   matFormData() {
+    console.log(this.studentMatForm.value);
+    this.dataService.matFormData = this.studentMatForm.value
+
+  }
+
 }

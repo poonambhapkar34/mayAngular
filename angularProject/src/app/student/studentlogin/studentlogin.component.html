@@ -8,7 +8,9 @@
         || studentForm.get('studentName')?.hasError?.('maxlength')" class="error">Enter valid name
 
     </span>
-    <span *ngIf="!studentForm.get('studentName')?.touched && studentForm.get('studentName')?.hasError?.('required') ">name is required</span>
+    <span
+      *ngIf="!studentForm.get('studentName')?.touched && studentForm.get('studentName')?.hasError?.('required') ">name
+      is required</span>
     <br>
     <input type="text" formControlName="studentMob">Student Mobile No
     <br>
@@ -29,18 +31,20 @@
 </div>
 <br>
 <button (click)="studentMatData()">Mat Form</button>
-
 <br>
-<div>
-<form [formGroup]="studentMatForm!">
-<mat-form-field>
-  <mat-label>StudentMatName</mat-label>
-  <input matInput  type="text" formControlName="studentMatName">
-  <mat-hint >Please enter your name as per Adhar card</mat-hint>
-  <mat-error *ngIf="studentMatForm.get('studentMatName')?.hasError?.('maxlength')">Please enter valid name as per Adhar card</mat-error>
+<br>
+<div *ngIf="matForm">
+  <form [formGroup]="studentMatForm!">
+    <mat-form-field>
+      <mat-label>StudentMatName</mat-label>
+      <input matInput type="text" formControlName="studentMatName">
+      <mat-hint *ngIf="!studentMatForm.get('studentMatName')?.touched ">Please enter your name as per Adhar card
+      </mat-hint>
+      <mat-error *ngIf="studentMatForm.get('studentMatName')?.hasError?.('maxlength')">Please enter valid name as per
+        Adhar card</mat-error>
 
-</mat-form-field>
-<button mat-raised-button class="btn" color="warn">Matsubmit</button>
-</form>
+    </mat-form-field>
+    <button mat-raised-button class="btn" color="warn" (click)="matFormData()">Matsubmit</button>
+  </form>
 
 </div>

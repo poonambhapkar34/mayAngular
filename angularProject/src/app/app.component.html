@@ -18,5 +18,7 @@
 <a routerLink="student/studentLogin">studentModule</a><br>
 <a routerLink="admin/adminLogin">adminModule</a>
 <a routerLink="about/aboutUs">about us Module</a>
-
+<app-child [name]="myName"></app-child>
+<input type="text" #inputValue>Type something 
+<button (click)="dataFromParToChild(inputValue.value)">parentToChild</button>
 <router-outlet></router-outlet>
