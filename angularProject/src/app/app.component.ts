@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup,FormBuilder, } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,10 @@ import { FormGroup,FormBuilder, } from '@angular/forms';
 
 export class AppComponent {
   myName = 'Jay Patil';
+  childFlag = true;
+  constructor(private route : Router){
+
+  }
   
   // ngOnchanges(){
   //   console.log('ngOnchange calling');
@@ -22,4 +27,9 @@ export class AppComponent {
     this.myName = data
 
   }
+  ngDestroy(){
+    this.childFlag = false
+ 
+  }
+
 }
