@@ -16,6 +16,7 @@ export class DataService {
    };
    
    matFormData:any;
+  dataComingFromChild: any;
 
 
   constructor() { }

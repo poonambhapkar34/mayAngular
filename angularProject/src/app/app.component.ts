@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup,FormBuilder, } from '@angular/forms';
 import { Router } from '@angular/router';
+import { DataService } from './data.service';
 
 @Component({
   selector: 'app-root',
@@ -9,27 +10,18 @@ import { Router } from '@angular/router';
 })
 
 export class AppComponent {
-  myName = 'Jay Patil';
-  childFlag = true;
-  constructor(private route : Router){
+
+  constructor(){
 
   }
   
-  // ngOnchanges(){
-  //   console.log('ngOnchange calling');
-  // }
 
   
   ngOnInit(): void {
 
   }
-  dataFromParToChild(data:any){
-    this.myName = data
 
-  }
-  ngDestroy(){
-    this.childFlag = false
- 
-  }
+
+
 
 }

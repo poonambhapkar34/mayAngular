@@ -3,16 +3,16 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
-
-
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { TestComponent } from './test/test.component';
 
 const routes: Routes = [
   {path:'login', component: LoginComponent},
   {path:'logout', component: LogoutComponent},
+  {path:'test', component:TestComponent},
 
-  // {path:'**', component:PagenotfoundComponent}
-//  {path:'', redirectTo:'/home' , pathMatch:'full'},
+  //{path:'**', component:PagenotfoundComponent}
+ {path:'', redirectTo:'/home' , pathMatch:'full'},
   {path: 'home' , component: HomeComponent},
   // {path:'**', component:PagenotfoundComponent}
   {path: 'student', loadChildren:()=>import('./student/student.module').then(modu=>modu.StudentModule)},
