@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/data.service';
 
 @Component({
   selector: 'app-adminlogout',
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./adminlogout.component.scss']
 })
 export class AdminlogoutComponent implements OnInit {
+  formData:any;
 
-  constructor() { }
+  constructor(private dataservice: DataService) { }
 
   ngOnInit(): void {
+
+  }
+  getServiceData(){
+ 
+    
+  this.formData = this.dataservice.formData;
+  console.log('formdata',this.formData);
+    
   }
 
 }

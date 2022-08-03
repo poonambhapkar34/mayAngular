@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   myName = 'Jay Patil';
   childFlag = true;
+  childData:any;
+  userMobNo:any;
   constructor() { }
 
   ngOnInit(): void {
@@ -19,8 +21,18 @@ export class HomeComponent implements OnInit {
   parentDataFun(data:any){
     console.log('datacoming from child===>'+ data);
   //  this.dataService.dataComingFromChild = data;
+      }
 
-    
-  }
+      getData(data:any){
+        console.log('data coming from child---->>>>>', data);
+        this.childData = data;
+
+      }
+
+      sendData(data:any){
+        this.userMobNo = data;
+
+      }
+     
 
 }

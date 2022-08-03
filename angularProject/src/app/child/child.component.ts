@@ -6,7 +6,7 @@ import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/cor
   styleUrls: ['./child.component.scss']
 })
 export class ChildComponent implements OnInit,OnChanges {
- @Input() name :any;
+ @Input() mobNo :any;
   constructor() { 
     console.log('constructor calling');
     

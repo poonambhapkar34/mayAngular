@@ -14,9 +14,10 @@ export class DataService {
     carName:'mincuper',
     carPrice:'2500000'
    };
-   
-   matFormData:any;
+  matFormData:any;
   dataComingFromChild: any;
+
+  formData:any;
 
 
   constructor() { }

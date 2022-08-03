@@ -22,6 +22,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {  MatButtonModule, } from "@angular/material/button";
 import { MatSliderModule } from '@angular/material/slider';
 import { ChildComponent } from './child/child.component';
+import { DatatransferComponent } from './datatransfer/datatransfer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +37,8 @@ import { ChildComponent } from './child/child.component';
     LoginComponent,
     LogoutComponent,
     HomeComponent,
-    ChildComponent
+    ChildComponent,
+    DatatransferComponent
   ],
   imports: [
     BrowserModule,

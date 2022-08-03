@@ -7,7 +7,7 @@
 <app-signin></app-signin>
 <app-signout></app-signout>
 <app-test></app-test> -->
-
+<div class="main">
 <a routerLink="/login">Login</a>
 <br>
 <a routerLink="/logout">logout</a>
@@ -20,8 +20,29 @@
 <a routerLink="/admin/adminLogin">adminModule</a>
 <a routerLink="/about/aboutUs">about us Module</a><br>
 <a routerLink="/test">test component</a>
-<app-child [name]="myName"></app-child>
+<!-- <app-child [name]="myName"></app-child>
 <input type="text" #inputValue>Type something 
 <button (click)="dataFromParToChild(inputValue.value)">parentToChild</button>
-<app-test (parentData)="parentDataFun($event)" ></app-test>
+<app-test (parentData)="parentDataFun($event)" ></app-test> -->
 
+</div>
+<br>
+<br>
+
+<app-datatransfer (childData)="getData($event)" ></app-datatransfer>
+<br>
+<br>
+<div class="main1">
+    <h1>{{childData}}</h1>
+</div>
+<br><br>
+
+
+<div class="main2">
+
+<input type="tel" #mobNo> Type your mobile number<br>
+<button (click)="sendData(mobNo.value)">parentData</button>
+<br>
+<app-child [mobNo]="userMobNo"></app-child>
+</div>
+<br>
