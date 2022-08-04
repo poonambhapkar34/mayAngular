@@ -27,5 +27,15 @@ export class DataService {
                   'color':'red',
                   'price':200 }
   }
+ 
+ 
+
+  setFormData(formData:any){
+    this.formData = formData;
+  }
+
+  getFormData(){
+    return this.formData;
+  }
 
 }

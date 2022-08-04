@@ -22,8 +22,12 @@ export class AdminloginComponent implements OnInit {
   }
   adminFormData(adminFormData:NgForm , xyx?:any){
     console.log(adminFormData);
-    console.log(xyx);
-    this.dataService.formData = adminFormData;
+    console.log(' this.dataService.formData before assigning data====', this.dataService.formData);
+   
+    //this.dataService.formData = adminFormData;
+    this.dataService.setFormData(adminFormData)
+    console.log(' this.dataService.formData====', this.dataService.formData);
+    
     
     
   }
