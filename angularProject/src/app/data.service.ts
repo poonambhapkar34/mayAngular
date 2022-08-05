@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { HttpClient  } from "@angular/common/http";
 console.log('global Data service')
 
 @Injectable({
@@ -19,8 +20,10 @@ export class DataService {
 
   formData:any;
 
+  url = "https://jsonplaceholder.typicode.com/users"
 
-  constructor() { }
+
+  constructor(private http : HttpClient) { }
 
   dataServiceFunction(){
    return this.fruit = { 'fruitName':'Apple',
@@ -28,8 +31,6 @@ export class DataService {
                   'price':200 }
   }
  
- 
-
   setFormData(formData:any){
     this.formData = formData;
   }
@@ -37,5 +38,15 @@ export class DataService {
   getFormData(){
     return this.formData;
   }
+  //API calls
+
+  getApiData(){
+   return this.http.get(this.url);
+
+  }
+
+
+
+
 
 }

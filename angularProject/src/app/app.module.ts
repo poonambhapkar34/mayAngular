@@ -23,6 +23,7 @@ import {  MatButtonModule, } from "@angular/material/button";
 import { MatSliderModule } from '@angular/material/slider';
 import { ChildComponent } from './child/child.component';
 import { DatatransferComponent } from './datatransfer/datatransfer.component';
+import { HttpClientModule } from "@angular/common/http";
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +49,8 @@ import { DatatransferComponent } from './datatransfer/datatransfer.component';
     BrowserAnimationsModule,
     MatButtonModule,
     MatSliderModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
     // AdminModule
   ],
 
