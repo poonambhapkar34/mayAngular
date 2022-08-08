@@ -13,6 +13,8 @@ export class AdminloginComponent implements OnInit {
       mobileNo:'9896666666'
   }
   carData:any;
+  postResponse: any;
+  
   constructor(private dataService: DataService ) { }
  
   ngOnInit(): void {
@@ -28,7 +30,15 @@ export class AdminloginComponent implements OnInit {
     this.dataService.setFormData(adminFormData)
     console.log(' this.dataService.formData====', this.dataService.formData);
     
-    
+    this.dataService.postApiCall(adminFormData).subscribe((respo)=>{
+      console.log('postApi response',respo);
+      this.postResponse = respo;
+      // if(this.postResponse.statusKey=='Success'){
+        
+
+      // }
+      
+    })
     
   }
 

@@ -1,0 +1,35 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "name": "json-server",
+      "mobNo": "9898999999"
+    },
+    {
+      "id": "2",
+      "name": "poonam",
+      "mobNo": "9777997777"
+    },
+    {
+      "id": "3",
+      "name": "Jay",
+      "mobNo": "7777777777"
+    },
+    {
+      "id": "4",
+      "name": "Jayyyy",
+      "mobNo": "7777777777"
+    },
+    {
+      "name": "om",
+      "mobNo": "77777775",
+      "id": "Xtq2v8J"
+    },
+    {
+      "adminName": "sharanya",
+      "adminMobile": "9896666666",
+      "id": "OaZ90aN",
+      "status":"Success"
+    }
+  ]
+}

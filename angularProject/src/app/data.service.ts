@@ -20,7 +20,8 @@ export class DataService {
 
   formData:any;
 
-  url = "https://jsonplaceholder.typicode.com/users"
+  //url = "https://jsonplaceholder.typicode.com/users"
+  url = "http://localhost:3000/posts"
 
 
   constructor(private http : HttpClient) { }
@@ -43,6 +44,10 @@ export class DataService {
   getApiData(){
    return this.http.get(this.url);
 
+  }
+
+  postApiCall(data:any){
+    return this.http.post(this.url, data)
   }
 
 
