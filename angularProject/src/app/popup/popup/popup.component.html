@@ -3,3 +3,5 @@
 <ul >
     <li *ngFor="let data of apiData">{{data.id}} {{data.name}}</li>
 </ul>
+<button (click)="deleteRecord('2')">delet Record</button>
+<button (click)="putRecord('4')" >put Record</button>

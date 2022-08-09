@@ -24,7 +24,20 @@ export class PopupComponent implements OnInit {
 
     })
   }
+  deleteRecord(id:any){
+    this.dataService.deletApiCall(id).subscribe(data=>{
+      console.log(data);
+      
+    })
 
+  }
 
+  putRecord(id:any){
+    const body = {name: 'shreedharNew' };
+    this.dataService.putApiCall(id , body).subscribe(data=>{
+      console.log(data);
+      
+    })
+  }
 
 }
