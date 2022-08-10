@@ -3,5 +3,8 @@
 <ul >
     <li *ngFor="let data of apiData">{{data.id}} {{data.name}}</li>
 </ul>
-<button (click)="deleteRecord('2')">delet Record</button>
+<input type="text" #inpValue>
+<button (click)="deleteRecord(inpValue.value)">delet Record</button>
 <button (click)="putRecord('4')" >put Record</button>
+<p>{{cars$}}</p>
+<a routerLink="/test">test</a>

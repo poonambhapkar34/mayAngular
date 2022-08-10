@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient  } from "@angular/common/http";
+import { Observable } from 'rxjs';
 console.log('global Data service')
 
 @Injectable({
@@ -41,7 +42,7 @@ export class DataService {
   }
   //API calls
 
-  getApiData(){
+  getApiData() {
    return this.http.get(this.url);
   //return this.http.get(this.url + "/" + "4")
 
