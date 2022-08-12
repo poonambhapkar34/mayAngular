@@ -5,6 +5,8 @@
 </ul>
 <input type="text" #inpValue>
 <button (click)="deleteRecord(inpValue.value)">delet Record</button>
-<button (click)="putRecord('4')" >put Record</button>
-<p>{{cars$}}</p>
+<button (click)="putRecord('4')" >put Record</button><br>
+<button (click)="getObsrData()" >get observable Record</button>
+<p *ngIf="carFlag">{{cData}}</p><br>
+<button (click)="getPromises()">promises</button>
 <a routerLink="/test">test</a>
