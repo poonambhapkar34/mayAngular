@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/data.service';
 
 @Component({
   selector: 'app-popup2',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Popup2Component implements OnInit {
 
-  constructor() { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
   }
+
+  subDataSet(data:any){
+
+    this.dataService.subjectData.next({userData: data})
+
+
+  }
+
+
 
 }

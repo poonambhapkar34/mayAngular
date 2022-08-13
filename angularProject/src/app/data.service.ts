@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient  } from "@angular/common/http";
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 console.log('global Data service')
 
 @Injectable({
@@ -18,8 +18,9 @@ export class DataService {
    };
   matFormData:any;
   dataComingFromChild: any;
-
   formData:any;
+
+  subjectData = new Subject<any>();
 
   //url = "https://jsonplaceholder.typicode.com/users"
   url = "http://localhost:3000/posts"
@@ -60,6 +61,9 @@ export class DataService {
    return this.http.put(this.url + "/" + id, body)
   }
 
+  setSubjectData(){
+    
+  }
 
 
 
